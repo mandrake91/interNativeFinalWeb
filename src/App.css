@@ -1,0 +1,60 @@
+/* styles.css */
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.navbar {
+  background-color: #6a3ab2; /* Violeta claro */
+}
+
+.navbar-brand {
+  color: #fff;
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+.navbar-toggler-icon {
+  background-color: #fff;
+}
+
+.nav-link {
+  color: #000;
+  margin-right: 10px;
+}
+
+.nav-link:hover {
+  color: #fff;
+}
+
+.container {
+  padding: 20px; /* Agrega un relleno para separar del borde de la pantalla */
+}
+
+.route-container {
+  padding-top: 20px; /* Agrega un espacio arriba para separar del navbar */
+}
+
+.g-4 > [class*='col-'] {
+  flex: 0 0 calc(33.33% - 16px); /* Ajusta el ancho de las columnas para mostrar tres por fila */
+  margin-bottom: 16px; /* Añade un margen inferior para separar las tarjetas */
+}
+
+.card {
+  height: 100%; /* Asegura que la tarjeta ocupe toda la altura disponible */
+}
+
+.card img {
+  height: 200px; /* Establece una altura fija para las imágenes */
+  object-fit: cover; /* Ajusta el tamaño de la imagen para cubrir el contenedor */
+}
+
+
+
+.route-content {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}

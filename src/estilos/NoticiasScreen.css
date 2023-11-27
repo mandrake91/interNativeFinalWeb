@@ -1,0 +1,11 @@
+.center-spinner-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh; /* Altura del 100% de la ventana */
+  }
+  
+  /* Aplica estos estilos a tu Spinner */
+  .center-spinner-container .spinner {
+    /* Puedes agregar estilos adicionales según sea necesario */
+  }
