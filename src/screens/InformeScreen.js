@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Form, Button } from 'react-bootstrap';
 import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet';
 import { format } from 'date-fns';
+import GoogleMap from './GoogleMap';
 
 export default function InformeScreen() {
   const [selectedType, setSelectedType] = useState('');
@@ -64,7 +65,7 @@ export default function InformeScreen() {
         <Form.Group controlId="formLocation">
           <Form.Label>Ubicación:</Form.Label>
           {location ? (
-            <MapContainer
+            <GoogleMap
               center={[location.latitude, location.longitude]}
               zoom={13}
               style={styles.map}
@@ -75,7 +76,7 @@ export default function InformeScreen() {
               <Marker position={[location.latitude, location.longitude]}>
                 <Popup>Tu ubicación</Popup>
               </Marker>
-            </MapContainer>
+            </GoogleMap>
           ) : (
             <p style={styles.placeholderText}>Obteniendo ubicación...</p>
           )}
@@ -149,4 +150,3 @@ const styles = {
     marginTop: 16,
   },
 };
-

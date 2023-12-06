@@ -62,7 +62,7 @@ const App = () => {
                   element={<PerfilScreen />}
                 />
                 <Route
-                  path="/administrador"
+                  path="/administrador/*"
                   element={<AdministradorScreen />}
                 />
                 <Route

@@ -1,4 +1,4 @@
-import React from 'react';
+/*import React from 'react';
 import { Link, Route, Routes } from 'react-router-dom';
 import CargarNoticiaScreen from './CargarNoticiaScreen';
 import AgregarUsuarioScreen from './AgregarUsuarioScreen';
@@ -66,6 +66,48 @@ const styles = {
     fontSize: '16px',
     fontWeight: 'bold',
   },
+};
+
+export default AdministradorScreen;
+*/
+import React from 'react';
+import { Link, Routes, Route, BrowserRouter as Router } from 'react-router-dom';
+import CargarNoticiaScreen from './CargarNoticiaScreen';
+import AgregarUsuarioScreen from './AgregarUsuarioScreen';
+import ReportesScreen from './ReportesScreen';
+import VerificarIncidentesScreen from './VerificarIncidentesScreen';
+
+const AdministradorScreen = () => {
+  return (
+      <div style={{ display: 'flex' }}>
+        <div style={{ marginRight: '20px' }}>
+          <Link to="/cargarNoticia">
+            <button>Agregar Noticias</button>
+          </Link>
+
+          <Link to="/agregarUsuario">
+            <button>Agregar Usuario</button>
+          </Link>
+
+          <Link to="/visualizar-reportes">
+            <button>Visualizar Reportes</button>
+          </Link>
+
+          <Link to="/listadoIncidentes">
+            <button>Verificar Incidentes</button>
+          </Link>
+        </div>
+
+        <div>
+          <Routes>
+            <Route path="/cargarNoticia" element={<CargarNoticiaScreen />} />
+            <Route path="/agregarUsuario" element={<AgregarUsuarioScreen />} />
+            <Route path="/visualizar-reportes" element={<ReportesScreen />} />
+            <Route path="/listadoIncidentes" element={<VerificarIncidentesScreen />} />
+          </Routes>
+        </div>
+      </div>
+  );
 };
 
 export default AdministradorScreen;

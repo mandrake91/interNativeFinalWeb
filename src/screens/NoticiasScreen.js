@@ -14,7 +14,7 @@ const NoticiasScreen = () => {
     fetchNews();
   }, []);
 
-  const noticiasUrl = 'http://192.168.0.11:8000/api/getNoticias';
+  const noticiasUrl = 'http://192.168.0.11:8000/api/getNoticias'; 
 
   const fetchNews = async () => {
     try {
@@ -38,7 +38,6 @@ const NoticiasScreen = () => {
   };
 
   const handleNewsPress = (item) => {
-    // Navegar a la pantalla de Detalle de Noticia con React Router
     navigate(`/detalle-noticia/${item.id}`);
   };
 
@@ -56,8 +55,11 @@ const NoticiasScreen = () => {
         <Row xs={1} md={3} className="g-4">
           {news.map((item) => (
             <Col key={item.id} style={{ marginBottom: '16px' }}>
-              <Card>
-                <Card.Img src={item.imagen} style={{ height: '200px', objectFit: 'cover' }} />
+              <Card style={{ border: '1px solid #ddd', borderRadius: '8px' }}>
+                <Card.Img
+                  src={`${process.env.PUBLIC_URL}/${item.imagen}`}
+                  style={{ height: '200px', objectFit: 'cover', borderTopLeftRadius: '8px', borderTopRightRadius: '8px' }}
+                />
                 <Card.Body>
                   <Card.Title style={{ fontSize: '18px', fontWeight: 'bold', marginBottom: '4px' }}>
                     {item.titulo}
@@ -81,6 +83,5 @@ const NoticiasScreen = () => {
     </div>
   );
 };
-
 
 export default NoticiasScreen;
