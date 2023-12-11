@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { Form, Button } from 'react-bootstrap';
-import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet';
+//import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet';
 import { format } from 'date-fns';
-import GoogleMap from './GoogleMap';
+//import GoogleMap from './GoogleMap';
 
 export default function InformeScreen() {
   const [selectedType, setSelectedType] = useState('');
@@ -62,25 +62,7 @@ export default function InformeScreen() {
           </Form.Control>
         </Form.Group>
 
-        <Form.Group controlId="formLocation">
-          <Form.Label>Ubicación:</Form.Label>
-          {location ? (
-            <GoogleMap
-              center={[location.latitude, location.longitude]}
-              zoom={13}
-              style={styles.map}
-            >
-              <TileLayer
-                url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-              />
-              <Marker position={[location.latitude, location.longitude]}>
-                <Popup>Tu ubicación</Popup>
-              </Marker>
-            </GoogleMap>
-          ) : (
-            <p style={styles.placeholderText}>Obteniendo ubicación...</p>
-          )}
-        </Form.Group>
+      
 
         <Form.Group controlId="formDate">
           <Form.Label>Fecha:</Form.Label>
@@ -150,3 +132,27 @@ const styles = {
     marginTop: 16,
   },
 };
+
+
+/*
+
+  <Form.Group controlId="formLocation">
+          <Form.Label>Ubicación:</Form.Label>
+          {location ? (
+            <GoogleMap
+              center={[location.latitude, location.longitude]}
+              zoom={13}
+              style={styles.map}
+            >
+              <TileLayer
+                url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+              />
+              <Marker position={[location.latitude, location.longitude]}>
+                <Popup>Tu ubicación</Popup>
+              </Marker>
+            </GoogleMap>
+          ) : (
+            <p style={styles.placeholderText}>Obteniendo ubicación...</p>
+          )}
+        </Form.Group>
+        */

@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+/*import React, { useState, useEffect } from 'react';
 import { Bar } from 'react-chartjs-2';
 import { Doughnut } from 'react-chartjs-2';
 import '../estilos/ReportesScreen.css'; // Importa el archivo de estilos CSS
@@ -79,3 +79,4 @@ const ReportesScreen = () => {
 
 export default ReportesScreen;
 
+*/
